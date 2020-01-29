@@ -4,13 +4,11 @@ jobs:
   build:
     name: Hello world action
     runs-on: ubuntu-latest    
-    strategy:
-      matrix:
-        python-version: [3.8]
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v1 
+    - name: Install package
+      run: |
+        sudo apt-get install python
     - uses: ./action-a
-      with:
-        python-version: ${{ matrix.python-version }}
       env:
         MY_NAME: "armink"
