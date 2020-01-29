@@ -2,4 +2,4 @@
 
 sh -c "echo Hello world my name is $MY_NAME"
 
-python echo.py
+python3 echo.py
