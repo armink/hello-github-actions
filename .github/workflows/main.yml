@@ -9,6 +9,9 @@ jobs:
     - name: Install package
       run: |
         sudo apt-get install python
+        pwd
+        python ./action-a/echo.py
+        python3 ./action-a/echo.py
     - uses: ./action-a
       env:
         MY_NAME: "armink"
