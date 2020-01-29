@@ -9,6 +9,6 @@ jobs:
     - name: Install package
       run: |
         sudo apt-get install python
-        pwd
-        python ./action-a/echo.py
+    - name: Startup scripts
+      run: |
         python3 ./action-a/echo.py
