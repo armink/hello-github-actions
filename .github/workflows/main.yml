@@ -4,8 +4,13 @@ jobs:
   build:
     name: Hello world action
     runs-on: ubuntu-latest    
+    strategy:
+      matrix:
+        python-version: [3.8]
     steps:
     - uses: actions/checkout@v1
     - uses: ./action-a
+      with:
+        python-version: ${{ matrix.python-version }}
       env:
-        MY_NAME: "Mona"
+        MY_NAME: "armink"
