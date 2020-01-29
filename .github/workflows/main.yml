@@ -5,7 +5,10 @@ jobs:
     name: Hello world action
     runs-on: ubuntu-latest    
     steps:
-    - uses: actions/checkout@v1
-    - uses: ./action-a
-      env:
-        MY_NAME: "Mona"
+    - uses: actions/checkout@v1 
+    - name: Install package
+      run: |
+        sudo apt-get install python
+    - name: Startup scripts
+      run: |
+        python3 ./action-a/echo.py
